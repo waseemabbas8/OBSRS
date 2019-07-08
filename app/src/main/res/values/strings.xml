@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">OBSRS</string>
+    <string name="full_app_name">Online Bus Seat Reservation</string>
+    <string name="search_bus_label">Reserve Your Desired Seat Here</string>
+    <string name="search_buses">Search Buses</string>
+    <string name="origin">Origin</string>
+    <string name="destination">Destination</string>
+    <string name="departure_date">Departure Date</string>
+
+    <string name="searching">Searching...</string>
+    <string name="confirm_booking">Confirm Booking</string>
+    <string name="please_wait">Please Wait...</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/bus_search_dest">
+
+    <fragment android:id="@+id/bus_search_dest" android:name="com.tekprosoft.busride.ui.main.BusSearchFragment"
+              android:label="bus_search_fragment" tools:layout="@layout/bus_search_fragment">
+        <action android:id="@+id/action_bus_search_dest_to_dest_bus_list" app:destination="@id/dest_bus_list"/>
+    </fragment>
+    <fragment android:id="@+id/bust_detail_dest" android:name="com.tekprosoft.busride.ui.main.BusDetailFragment"
+              android:label="bus_detail_fragment" tools:layout="@layout/bus_detail_fragment">
+        <action android:id="@+id/action_bust_detail_dest_to_booking_dest" app:destination="@id/booking_dest"/>
+        <argument android:name="bus" app:argType="com.tekprosoft.busride.model.Bus"/>
+    </fragment>
+    <fragment android:id="@+id/booking_dest" android:name="com.tekprosoft.busride.ui.main.BookingFragment"
+              android:label="booking_fragment" tools:layout="@layout/booking_fragment">
+        <argument android:name="seatObj" app:argType="com.tekprosoft.busride.model.Seat"/>
+    </fragment>
+    <fragment android:id="@+id/dest_bus_list" android:name="com.tekprosoft.busride.ui.main.BusListFragment"
+              android:label="fragment_bus_list" tools:layout="@layout/fragment_bus_list">
+        <argument android:name="busData" app:argType="com.tekprosoft.busride.model.BusSearchResponse"/>
+        <action android:id="@+id/action_dest_bus_list_to_bust_detail_dest" app:destination="@id/bust_detail_dest"/>
+    </fragment>
+</navigation>
